@@ -1,57 +1,71 @@
-# Lecture 9 Activity
+# Lecture 11 Activity
 
-For each activity, within this README file, embed a screenshot of your code as well as the drawing that is generated after you run your code. It's okay if your screenshot doesnt show all your code.
+For each activity, within this README file, embed a screenshot of your code as well as the drawing that is generated after you run your code.
 
-## Task 1 - Happy Face Class Definition
-
-Implement a class HappyFace:
-
-- A HappyFace has position 'x', 'y', and radius 'r', all of float type.
-- A HappyFace has fill color and outline color.
-- Write a function display() that draws the face centered at (x,y).
-  - The mouth is an arc with a diameter equal to '1.6*r'.
-  - The eyes are ellipses with dimensions 'r/2 * r/4'
-  - The outline’s thickness is 'r/20'
-
-- Use the HappyFace class to create two different faces and display them on the sketch.
-   - Use the dot operator to set the attributes. E.g.:
-     - face1.x = width/2;
-     - face1.y = height/2;
-     - face1.r = width/4.
-     - face1.fillColor = color(255,255,0);
-
-*Hint: code for drawing 1 happy face in a non-OOP way:*
-
-```
-float x = 50, y = 50, r = 20;
-fill(255,255,0);
-stroke(255,155,0);
-strokeWeight(r/20);
-ellipse(x,y,2*r,2*r);                
-//face
-arc(x,y,1.6*r,1.6*r,.1*PI,.9*PI); //mouth
-ellipse(x+r/2,y-r/4,r/4,r/2);     //right eye
-ellipse(x-r/2,y-r/4,r/4,r/2);     //left eye
-```
-
-Add code to move the faces and bounce them off the sketch edges
+## Task 1 - Can you produce the following output?
+<img src="img1.png" width="250px">
 
 Add a screenshot of your code and solution below this line:
 
-## Task 2 - Improve your game
+## Task 2 - Bubbles in My Bottle
+Create the animation of bubbles rising in a bottle:
+- Create a bubble class
+   - Attributes: x,y,radius,speedY
+   - Constructor: 
+     - x = random value from 0 to the sketch width
+     - y = random value from height+50 to height+750
+     - radius = random value from 1 to 10
+     - speedY = -10/radius
+   - move() function:  
+     - x-location randomly changes within -0.8 and 0.8
+     - y-location is incremented speedY 
+     - Once a bubble goes above the top edge of the sketch, its attributes are assigned new set of random values (similar to how they were set in the constructor).
+   - Display() function
+     - Draw an ellipse representing the bubble.
 
-1. Start with your game from Lecture Activity 8
+Create an array with 250 bubbles, then move and display them in the animation loop.
+*Challenge: Make sure we only have a maximum of 12 big bubbles at any time (size of bubbles: small is from 1 to 3, big is 10 to 15)*
 
-2. Copy the code to Lecture Activity 9 (cp)
-
-3. If you haven’t already, organize your code so it uses tabs
-
-4. Use object-oriented programming to create two classes:
-  - Ground Enemies (or Goombas from the original Mario)
-  - Flying Enemies (or Paratroopa from the original Mario)
-
-5. Add 3 ground enemies and 5 flying enemies; they should all have different names, and be of different colours; flying enemies should be restricted to the air, and ground enemies cannot fly.
-
-6. Remember that the original names and images are probably copyrighted, so you will have to find your own!
+It should look like [this](./mov1.mp4)
 
 Add a screenshot of your code and solution below this line:
+
+## Task 3 - Array of Buttons
+Create an array of 4 buttons arranged vertically where each button maintains its own state.
+Using the ToggleButton class below:
+
+<img src="img2.png" width="100px">
+
+```
+class ToggleButton {
+ float x, y, w, h;  //x,y are the center of the button
+ String onTxt, offTxt;
+ boolean on = false, mouseOver = false;
+ ToggleButton(float x,float y) {this(x,y,70,40,"ON","OFF");}
+ ToggleButton(float x,float y,float w,float h,String onTxt,String offTxt){
+   this.x = x;     this.y = y;    this.w = w;    this.h = h;
+   this.onTxt = onTxt;     this.offTxt = offTxt;
+ }
+ void click(int mx, int my) {
+   if(mx>x-w/2 && mx<x+w/2 && my>y-h/2 && my<y+h/2) on = !on;
+ }
+ void display() {
+   rectMode(CENTER); textAlign(CENTER,CENTER); textSize(w/3);
+   if (on) {
+     stroke(0, 255, 0);   fill(0, 200, 0);  rect(x, y, w, h);
+     fill(200, 255, 200); text("ON", x, y);
+   } else {
+     stroke(255, 0, 0);   fill(180, 0, 0);  rect(x, y, w, h);
+     fill(100, 0, 0);     text("OFF", x, y);
+   }
+ }
+}
+
+```
+```
+void mouseClicked(){btn.click(mouseX,mouseY);}
+```
+Add a screenshot of your code and solution below this line:
+
+
+## And that's it! Congratulations, you are done with all of the Lecture Activities!
