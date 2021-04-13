@@ -1,12 +1,27 @@
-# Task 1: Advanced ball bouncing
+# Question 2 (2 marks)
 
-By now you have seen a white ball bouncing on a screen many times.
-It's time to level up.
+The nested while loop below is supposed to print the 10x10 multiplication table (i.e. 1x1,1x2,1x3,1x4...2x1,2x2,...,10x10). 
+It currently has errors.
+Rewrite the nested while loop below to make it produce the desired output.
 
-Modify the provided code so that:
+```
+int x = 1;
+int y = 1;
 
-- In the top left corner, the sketch has the time elapsed since the sketch last restarted, and a "password" field (3 marks)
-- The sketch turns completely black (i.e. switches off) after 3 seconds of user inactivity (5 marks)
-- The animation can be restored if the user clicks the mouse. (2 marks)
-- The animation is also restored if the user enters a password, e.g. “cosc123” instead of a simple mouse click (BACKSPACE should reset the password). (5 marks)
-  - Hint: for this you will need to write a new method and update a blank string with the typed key (using `key`) and then check if the entered password matches the actual password
+while (x < 10){
+    while (y < 10){
+        System.out.print( (x*y) + " ");
+        y++;
+    }
+    x++;
+    System.out.println();
+}
+```
+
+## Your Solution
+
+```
+int x = 1;
+int y = 1;
+// continue your solution here
+```
