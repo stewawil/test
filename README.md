@@ -1,17 +1,21 @@
-## Question 1 - Change background colour on key-stroke (5 marks)
+## Question 2 - Add an alien counter (8 marks)
 
-You are provided some code in the Q1 directory, this is called the "standard template". Most of the questions below will start you off with the **same** standard template, but you will need to do different things to it. You should treat each question as an independent and separate question.
+Start with the standard template in the Q2 directory.
 
 Tasks: 
 
-a) change code so that pushing a key (e.g spacebar) randomly changes the background colour. Note: the colour must randomly change (i.e. use a random number generator).
+a) Create a counter that tracks how many aliens have gone gone through since the start of the program. Every time a new alien appears, increment the counter by one.
+
+b) Display the counter above the moon and update it to show the value of the counter.
 
 <div align="center">
-  <img height="400" src="../imgs/backgroundcolour.gif">
+  <img height="400" src="../imgs/counter.gif">
 </div> 
+
+Note: parts a and b can be done independently for part marks. For example, if you know how to do part b, but not part a, you can still display *any* counter value there for partial marks. Similarly, if you know how to do part a, but not part b, you can still get partial credit for creating a counter within Processing (even if it doesn't display).
 
 ### Rubric:
 
-- **1 mark** for changing the background colour
-- **2 marks** for changing the background colour *randomly*
-- **2 marks** for controlling colour-change with a key
+- **3 marks** creating a counter 
+- **2 marks** updating the counter each time an alien appears
+- **3 marks** displaying the counter value
