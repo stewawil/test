@@ -1,21 +1,19 @@
-## Question 2 - Add an alien counter (8 marks)
+## Question 3 - Stop the alien before the platform (5 marks)
 
-Start with the standard template in the Q2 directory.
+Start with the standard template in the Q3 directory.
 
 Tasks: 
 
-a) Create a counter that tracks how many aliens have gone gone through since the start of the program. Every time a new alien appears, increment the counter by one.
+a) Use the constrain function to ensure that the alien does not cross the platform. 
 
-b) Display the counter above the moon and update it to show the value of the counter.
+b) Once it reaches the platform, it should disappear then reappear as normal
 
 <div align="center">
-  <img height="400" src="../imgs/counter.gif">
+  <img height="400" src="../imgs/constrain.gif">
 </div> 
-
-Note: parts a and b can be done independently for part marks. For example, if you know how to do part b, but not part a, you can still display *any* counter value there for partial marks. Similarly, if you know how to do part a, but not part b, you can still get partial credit for creating a counter within Processing (even if it doesn't display).
 
 ### Rubric:
 
-- **3 marks** creating a counter 
-- **2 marks** updating the counter each time an alien appears
-- **3 marks** displaying the counter value
+- **2 marks** for using the constrain function correctly
+- **2 marks** for the alien disappearing once reaching the platform
+- **1 mark** for the alien reappearing after disappearing
