@@ -1,27 +1,17 @@
-# Question 2 (2 marks)
+## Question 1 - Change background colour on key-stroke (5 marks)
 
-The nested while loop below is supposed to print the 10x10 multiplication table (i.e. 1x1,1x2,1x3,1x4...2x1,2x2,...,10x10). 
-It currently has errors.
-Rewrite the nested while loop below to make it produce the desired output.
+You are provided some code in the Q1 directory, this is called the "standard template". Most of the questions below will start you off with the **same** standard template, but you will need to do different things to it. You should treat each question as an independent and separate question.
 
-```
-int x = 1;
-int y = 1;
+Tasks: 
 
-while (x < 10){
-    while (y < 10){
-        System.out.print( (x*y) + " ");
-        y++;
-    }
-    x++;
-    System.out.println();
-}
-```
+a) change code so that pushing a key (e.g spacebar) randomly changes the background colour. Note: the colour must randomly change (i.e. use a random number generator).
 
-## Your Solution
+<div align="center">
+  <img height="400" src="../imgs/backgroundcolour.gif">
+</div> 
 
-```
-int x = 1;
-int y = 1;
-// continue your solution here
-```
+### Rubric:
+
+- **1 mark** for changing the background colour
+- **2 marks** for changing the background colour *randomly*
+- **2 marks** for controlling colour-change with a key
